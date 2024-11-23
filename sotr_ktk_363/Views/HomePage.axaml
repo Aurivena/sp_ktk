@@ -1,0 +1,10 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="sotr_ktk_363.Views.HomePage">
+    <Grid>
+       <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="30">
+           <Label Foreground="Aqua" Content="Добро пожаловать на главную страницу!" FontSize="24" />
+           <TextBlock Foreground="Aqua" Text="Тут две кнопки. Одна кнопка для показа списка работников, а вторая для редактирования" LineHeight="35" Width="600" TextWrapping="Wrap" FontSize="24" />
+       </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:m="clr-namespace:sotr_ktk_363.Models"
+             xmlns:viewModels="clr-namespace:sotr_ktk_363.ViewModels"
+             x:Class="sotr_ktk_363.Views.EmployeeListPage"
+             x:DataType="viewModels:EmployeeListViewModel">
+
+    <Grid>
+        <Label Foreground="Aqua" Content="Список пользователей" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    
+        <ListBox ItemsSource="{Binding Employees}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="2"
+                 BorderBrush="Black" SelectedItem="{Binding SelectedEmployee}">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="m:Employee">
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="0,5" Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" />
+                            <TextBlock Text="{Binding Post}" FontSize="14" />
+                            <TextBlock Text="{Binding WorkExperience}" FontSize="14"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

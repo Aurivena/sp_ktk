@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:sotr_ktk_363.ViewModels"
+             x:Class="sotr_ktk_363.Views.ChangeEmployeePage"
+             x:DataType="viewModels:ChangeEmployeeViewModel">
+    
+    <Grid x:Name="UpdateEmployee">
+        <Label Content="Изменение данных сотрудника"/>
+        <Border Padding="50" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="10" Background="#262626" BorderThickness="2" BorderBrush="Black">
+            <Grid>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock HorizontalAlignment="Center" Text="Имя" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <TextBox x:Name="NameEmployee" FontSize="14" Padding="10" Margin="10,0,10,0" Text="{Binding Employee.Name}"/>
+                    
+                    <TextBlock HorizontalAlignment="Center" Text="Должность" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <TextBox x:Name="PostEmployee" FontSize="14" Padding="10" Margin="10,0,10,0" Text="{Binding Employee.Post}"/>
+                    
+                    <TextBlock HorizontalAlignment="Center" Text="Опыт работы" FontWeight="Bold" Margin="0,10,0,5"/>
+                    <TextBox x:Name="WorkExperienceEmployee" FontSize="14" Padding="10" Margin="10,0,10,0" Text="{Binding Employee.WorkExperience}"/>
+                    
+                    <Button VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Margin="5,40,5,10" Content="Обновить данные о сотруднике" Click="UpdateDataEmployee"/>
+                </StackPanel>
+            </Grid>
+        </Border>   
+    </Grid>
+</UserControl>
